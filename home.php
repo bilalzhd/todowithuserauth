@@ -63,6 +63,12 @@ if (isset($_GET['delete'])) {
   <?php require 'partials/_nav.php'; ?>
   <?php require 'partials/_dbconnect.php'; ?>
   <?php
+  if ($logged) {
+    echo '<div class="alert alert-success alert-dismissible fade show" role="alert">
+              <strong>Congratulations!</strong> You have been logged in.
+              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>';
+  }
   if ($inserted) {
     echo '<div class="alert alert-success alert-dismissible fade show" role="alert">
               <strong>Success!</strong> Your note has been added.
